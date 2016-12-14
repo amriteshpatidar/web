@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+long long int t,i,n,j,a,b,x,k,l=0;
+long long int ar[100000];
+scanf("%lld",&t);
+for(i=0;i<t;i++)
+{
+l=0;
+scanf("%lld",&n);
+for(j=0;j<n;j++)
+scanf("%lld",&ar[j]);
+for(a=0;a<n-1;a++)
+for(b=a+1;b<n;b++)
+{x=ar[a]*ar[b];
+for(k=0;k<n;k++)
+{
+if(ar[k]==x)
+{l=1;
+break;
+}
+
+}
+}
+if(l==1)
+printf("yes\n");
+else
+printf("no\n");
+}
+return 0;
+}
